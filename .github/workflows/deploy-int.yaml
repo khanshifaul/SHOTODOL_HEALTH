@@ -30,11 +30,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{env.NODE_VERSION}}
-          cache: 'yarn'
+          cache: 'npm'
       - run: | 
-         yarn
-         yarn build
-         yarn ci:test
+         npm install
+         npm run build
+         npm run generate
 
   create-deployment-artifacts:
     needs: test-application
@@ -45,7 +45,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{env.NODE_VERSION}}
-          cache: 'yarn'
+          cache: 'npm'
       - run: |
           touch .env
           echo STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_TEST_KEY }} >> .env
@@ -53,8 +53,8 @@ jobs:
           echo APP_DOMAIN=https://fullstackjack.dev >> .env
           echo RELEASE_VERSION=${GITHUB_REF} >> .env
           echo GITHUB_SHA=${{ github.sha }} >> .env
-          yarn
-          yarn build
+          npm install
+          npm run build
           cp .env .output/server/.env
           cp .env server/database/.env
           tar -czf "${GITHUB_SHA}".tar.gz .output
