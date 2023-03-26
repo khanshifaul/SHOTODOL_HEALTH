@@ -3,6 +3,7 @@ export default defineNuxtConfig({
     app: {
         rootTag: "div",
         baseURL: "/SHOTODOL_HEALTH",
+        buildAssetsDir: "/SHOTODOL_HEALTH/",
     },
     modules: [
         '@nuxtjs/tailwindcss',
