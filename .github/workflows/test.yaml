@@ -31,4 +31,4 @@ jobs:
       - run: | 
          npm install
          npm run build
-         npm ci:test
+         npm run generate
