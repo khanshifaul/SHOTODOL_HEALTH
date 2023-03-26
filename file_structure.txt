@@ -1,0 +1,47 @@
+|-- assets/
+|   |-- css/
+|   |   |-- tailwind.css
+|   |
+|   |-- images/
+|       |-- logo.png
+|       |-- banner.jpg
+|
+|-- components/
+|   |-- Navigation.vue
+|   |-- Footer.vue
+|   |-- AppointmentForm.vue
+|   |-- TestReports.vue
+|   |-- PatientRegistrationForm.vue
+|   |-- ChatWidget.vue
+|   |-- ...
+|
+|-- pages/
+|   |-- index.vue
+|   |-- about.vue
+|   |-- services.vue
+|   |-- contact.vue
+|   |-- login.vue
+|   |-- register.vue
+|   |-- appointments.vue
+|   |-- test-reports.vue
+|   |-- patient-registration.vue
+|   |-- health-education.vue
+|   |-- billing.vue
+|   |-- telemedicine.vue
+|   |-- ...
+|
+|-- plugins/
+|   |-- prisma.js
+|
+|-- static/
+|   |-- favicon.ico
+|
+|-- store/
+|   |-- index.js
+|
+|-- .env
+|-- .gitignore
+|-- nuxt.config.js
+|-- package.json
+|-- package-lock.json
+|-- README.md
